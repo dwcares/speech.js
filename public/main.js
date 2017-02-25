@@ -1,3 +1,14 @@
+//endpoint
+//key
+//mic stream
+
+// onpartial
+// onfull
+// onerror
+
+// startReco()
+// stopReco()
+
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
 
 var audioContext = null;
