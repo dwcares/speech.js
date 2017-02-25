@@ -1,0 +1,10 @@
+{
+  "name": "Speech",
+  "version": "0.0.1",
+  "description": "",
+  "main": "public/main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.14.1"
+  }
+}
