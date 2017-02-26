@@ -2,9 +2,8 @@
   "name": "Speech",
   "version": "0.0.1",
   "description": "",
-  "main": "public/main.js",
-  "dependencies": {},
-  "devDependencies": {
+  "main": "app.js",
+  "dependencies": {
     "express": "^4.14.1"
   }
 }
