@@ -32,7 +32,8 @@ setTimeout(speech.stopListening, 20000);
 ## Installation
 
 To install, reference `recorder.js` and `Speech.js` in your project
-```HTML5
+
+```
 <script src="recorder.js" type="text/javascript"></script>
 <script src="Speech.js" type="text/javascript"></script>
 ```
@@ -40,6 +41,7 @@ To install, reference `recorder.js` and `Speech.js` in your project
 ## API Reference
 
 #### Speech(options)
+  
   - `serverUri` _(String)_
   - **Returns** `Speech`
 
@@ -55,6 +57,7 @@ if (speech.isListening)
 ````
 
 #### speech.startListening(onPartial, onFull, onError)
+  
   - `onPartial` _(Function)_
   - `onFull` _(Function)_
   - `onError` _(String)_
@@ -66,7 +69,7 @@ speech.startListening(onPartial, onFull, onError)
 ````
 
 #### onPartial(partialResult)
-  - `partialResult` _(String)_
+`partialResult` _(String)_
   
   The partially recognized result returned from the server while the user is speaking. This result is likely to change while the user continues to speak until they pause. Returned for each word spoken, not appropriate for scenarios beyond transcription given frequency and low confidence of results returned. 
 
@@ -77,7 +80,7 @@ speech.startListening(onPartial, onFull, onError)
 ````
 
 #### onFull(fullResult)
-  - `fullResult` _(String)_
+`fullResult` _(String)_
 
   The fully recognized result returned from the server after the user paused long enough for the server to return a confident result. Appropriate for use for further processing, e.g. call a REST API.
 
@@ -88,7 +91,7 @@ speech.startListening(onPartial, onFull, onError)
 ````
 
 #### onError(error)
-  - `error` _(Error)_
+`error` _(Error)_
 
   An error prevented recognition from continuing (e.g. browser doesn't support getusermedia, user declined microphone access).
 
@@ -110,5 +113,5 @@ speech.stopListening()
 This project was implemented by technical mentors during [HackIllinois](http://hackillinois.org), the University of Illinois Urbana-Champaign, student-led hackathon.
 
 * David Washington [@dwcares](http://twitter.com/dwcares)
-* Hao Luo [@dwcares](http://twitter.com/dwcares)
-* Rachel Weil [@haolu](http://twitter.com/haoluo)
+* Hao Luo [@dwcares](http://twitter.com/howlowck)
+* Rachel Weil [@partytimeHXLNT](http://twitter.com/partytimeHXLNT)
