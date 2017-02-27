@@ -112,5 +112,5 @@ speech.stopListening()
 This project was implemented by technical mentors during [HackIllinois](http://hackillinois.org), the University of Illinois Urbana-Champaign, student-led hackathon.
 
 * David Washington [@dwcares](http://twitter.com/dwcares)
-* Hao Luo [@dwcares](http://twitter.com/howlowck)
+* Hao Luo [@howlowck](http://twitter.com/howlowck)
 * Rachel Weil [@partytimeHXLNT](http://twitter.com/partytimeHXLNT)
