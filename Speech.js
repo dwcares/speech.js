@@ -1,11 +1,11 @@
 
 (function (window) {
-    function Speech(options) {
+    function Speech(serverUri) {
         this.audioRecorder = null;
         this.isListening = false;
         this.audioSource = null;
         
-        this.uri = options.serverUri;
+        this.uri = serverUri;
     }
 
     Speech.prototype.startListening = function (onpartial, onfull, onerr) {
@@ -24,8 +24,18 @@
     }
 
     Speech.prototype.stopListening = function () {
-        this.isListening = false;
-        stopWebSocket();
+
+        if (this.isListening) {
+            
+            this.isListening = false;
+            
+            if (this.audioSource.stop) { 
+                this.audioSource.stop(); 
+            }
+            this.audioRecorder.stop(); 
+
+            stopWebSocket.call(this);
+        }
     }
 
     function getMicrophoneStream(success, err) {
@@ -74,7 +84,6 @@
         websocket.onerror = function (event) {   
             this.onerr(event); 
             this.stopListening();
-            websocket.close();
         }.bind(this);
 
         websocket.onopen = function () {
@@ -110,11 +119,9 @@
             else {
                 var text = message;
                 if (ch == 'f') {
-                    console.log('Full return:', text)
                     this.onfull(text);
                 }
                 else {
-                    console.log('Partial return:', text)
                     this.onpartial(text);
                 }
             }

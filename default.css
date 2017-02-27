@@ -1,0 +1,65 @@
+body {
+    padding: 20px;
+}
+
+span {
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+    font-size: 16pt;
+    max-width: 700px;        
+}
+
+.partial {
+    color: lightgrey;
+}
+
+.full {
+    color: #333333;
+}
+
+.cursor {
+    color: lightgrey;
+    display: none;
+    
+    animation: blink 750ms infinite;
+}
+
+    .listening .cursor {
+        display: inline;
+    }
+
+
+    @keyframes blink {
+
+        60% {opacity: 1;}
+        
+        0%, 100% {opacity: 0;}
+    }
+
+#toggleMic {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    background-color: dodgerblue;
+    background-image: url(img/mic.svg);
+    background-size: 10px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    border-radius: 20px;
+
+    width: 40px;
+    height: 40px;
+}
+
+    #toggleMic:hover {
+        background-color: #1eaaff;
+    }
+
+    .listening #toggleMic {
+        background-color: red;
+    }
+
+    .listening #toggleMic:hover {
+        background-color: lightcoral;
+    }
