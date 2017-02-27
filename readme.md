@@ -10,7 +10,7 @@ Speech.js provides continuous speech recognition from JavaScript using a WebSock
 
 ```javascript
 var uri =  `wss://${hostString}/${appRoot}${endpoint}`;
-var speech = new Speech({serverUri: uri});
+var speech = new Speech(serverUri);
 
 speech.startListening(
     function(partialTxt) {
@@ -20,7 +20,6 @@ speech.startListening(
         console.log("Full: " + fullText);
     }, 
     function(err) {
-        document.body.className = "";
         console.log("Error: " + err);
     }
 );
