@@ -1,3 +1,5 @@
+> Note: This is officailly supported throught the [Microsoft Cognitive Services Speech WebSocket Endpoint](https://docs.microsoft.com/en-us/azure/cognitive-services/speech/api-reference-rest/websocketprotocol). There is a Node.js sample availiable [here](https://github.com/michael-chi/BingStt-Websocket).
+
 # Speech.js - JavaScript support for continuous speech recognition
 
 ![Speech.js Animation](img/speechjs.gif)
